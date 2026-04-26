@@ -1,0 +1,13 @@
+{
+  "name": "margin_9_dataset",
+  "tag": "margin_9",
+  "description": "Prompts with max-minus-runner-up margin 9.",
+  "count": 5,
+  "row_ids": [
+    9,
+    90,
+    900,
+    9000,
+    90000
+  ]
+}

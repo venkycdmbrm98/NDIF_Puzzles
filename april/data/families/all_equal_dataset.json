@@ -1,0 +1,18 @@
+{
+  "name": "all_equal_dataset",
+  "tag": "all_equal",
+  "description": "Prompts where all five digits are identical.",
+  "count": 10,
+  "row_ids": [
+    0,
+    11111,
+    22222,
+    33333,
+    44444,
+    55555,
+    66666,
+    77777,
+    88888,
+    99999
+  ]
+}

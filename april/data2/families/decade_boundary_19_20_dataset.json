@@ -1,0 +1,28 @@
+{
+  "name": "decade_boundary_19_20_dataset",
+  "tag": "decade_boundary_19_20",
+  "description": "Prompts centered on the decade boundary 19 -> 20.",
+  "count": 20,
+  "row_ids": [
+    10864,
+    10865,
+    10902,
+    10903,
+    10904,
+    10905,
+    10906,
+    10907,
+    10908,
+    10909,
+    10910,
+    10911,
+    21736,
+    21737,
+    21738,
+    21902,
+    22161,
+    22165,
+    22166,
+    22170
+  ]
+}

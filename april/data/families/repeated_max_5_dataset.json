@@ -1,0 +1,18 @@
+{
+  "name": "repeated_max_5_dataset",
+  "tag": "repeated_max_5",
+  "description": "Prompts where the maximum value appears exactly 5 times.",
+  "count": 10,
+  "row_ids": [
+    0,
+    11111,
+    22222,
+    33333,
+    44444,
+    55555,
+    66666,
+    77777,
+    88888,
+    99999
+  ]
+}

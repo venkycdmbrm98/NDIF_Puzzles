@@ -1,0 +1,9 @@
+{
+  "name": "max_value_0_dataset",
+  "tag": "max_value_0",
+  "description": "Prompts whose maximum value is 0.",
+  "count": 1,
+  "row_ids": [
+    0
+  ]
+}

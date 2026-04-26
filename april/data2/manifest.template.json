@@ -1,0 +1,108 @@
+{
+  "schema_version": "2.0",
+  "status": "proposal",
+  "task": "model2_max_of_five_two_digit_numbers",
+  "prompt_length": 5,
+  "number_range": [
+    0,
+    99
+  ],
+  "tokenization": {
+    "type": "split_digits",
+    "tokens_per_number": 2,
+    "special_tokens": {
+      "bos": 10,
+      "sep": 11,
+      "ans": 12,
+      "eos": 13
+    }
+  },
+  "answer_format": {
+    "tokens": 2,
+    "step_1": "output_tens",
+    "step_2": "output_ones"
+  },
+  "sampling_strategy": "stratified_constructive_union",
+  "recommended_total_rows": 25000,
+  "recommended_canonical_probe_count": 128,
+  "files": {
+    "final_dataset": "final_dataset.jsonl",
+    "canonical_probe_dataset": "canonical_probe_dataset.jsonl",
+    "families_dir": "families",
+    "pairs_dir": "pairs"
+  },
+  "row_fields": [
+    "row_id",
+    "input",
+    "output",
+    "output_tens",
+    "output_ones",
+    "max_value",
+    "max_positions",
+    "num_max",
+    "first_max_pos",
+    "last_max_pos",
+    "unique_max",
+    "tens_digits",
+    "ones_digits",
+    "max_tens",
+    "max_tens_positions",
+    "num_max_tens",
+    "unique_max_tens",
+    "tens_margin_to_runner_up",
+    "all_tens_equal",
+    "max_tens_candidate_ones",
+    "max_ones_within_max_tens",
+    "winning_within_max_tens_positions",
+    "num_max_ones_within_max_tens",
+    "ones_margin_within_max_tens",
+    "winner_ones_is_global_max",
+    "family_tags"
+  ],
+  "family_groups": {
+    "core": [
+      "all_inputs_dataset",
+      "unique_max_dataset",
+      "repeated_max_2_dataset",
+      "repeated_max_3_dataset",
+      "repeated_max_4_dataset",
+      "repeated_max_5_dataset",
+      "first_max_pos_0_dataset",
+      "first_max_pos_1_dataset",
+      "first_max_pos_2_dataset",
+      "first_max_pos_3_dataset",
+      "first_max_pos_4_dataset"
+    ],
+    "tens_stage": [
+      "unique_max_tens_dataset",
+      "tied_max_tens_2_dataset",
+      "tied_max_tens_3_dataset",
+      "tied_max_tens_4_dataset",
+      "all_tens_equal_dataset",
+      "tens_margin_0_dataset",
+      "tens_margin_1_dataset",
+      "tens_margin_2plus_dataset"
+    ],
+    "ones_stage": [
+      "tied_max_tens_unique_max_one_dataset",
+      "tied_max_tens_repeated_max_2_dataset",
+      "tied_max_tens_repeated_max_3plus_dataset",
+      "ones_margin_within_max_tens_0_dataset",
+      "ones_margin_within_max_tens_1_dataset",
+      "ones_margin_within_max_tens_2plus_dataset",
+      "all_tens_equal_unique_max_one_dataset",
+      "all_tens_equal_repeated_max_2plus_dataset"
+    ],
+    "binding_and_conflict": [
+      "boundary_crossing_dataset",
+      "cross_digit_conflict_dataset",
+      "winner_ones_not_global_max_dataset",
+      "binding_sensitive_dataset"
+    ]
+  },
+  "paired_probe_files": [
+    "pairs_tens_switch.jsonl",
+    "pairs_ones_switch.jsonl",
+    "pairs_binding_swap.jsonl"
+  ]
+}
